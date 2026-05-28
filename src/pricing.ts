@@ -32,7 +32,7 @@ export function discountForCodeCents(
 }
 
 export function shippingCents(subtotal: number): number {
-  return subtotal >= 10000 ? 0 : 799
+  return subtotal >= 9900 ? 0 : 799
 }
 
 export function calculateCartTotals(

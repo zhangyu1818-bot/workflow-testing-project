@@ -25,6 +25,11 @@ describe('pricing', () => {
   })
 
   it('charges shipping below the free shipping threshold', () => {
-    expect(shippingCents(9900)).toBe(799)
+    expect(shippingCents(9899)).toBe(799)
+  })
+
+  it('grants free shipping at and above $99', () => {
+    expect(shippingCents(9900)).toBe(0)
+    expect(shippingCents(10000)).toBe(0)
   })
 })

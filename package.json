@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "demo:jira:seed": "node scripts/seed-demo-jira.mjs",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },

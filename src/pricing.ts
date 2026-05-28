@@ -28,6 +28,7 @@ export function discountForCodeCents(
   const normalized = code.trim().toUpperCase()
   if (normalized === 'DEMO10') return Math.round(subtotal * 0.1)
   if (normalized === 'WELCOME5') return 500
+  if (normalized === 'VIP15') return Math.round(subtotal * 0.15)
   return 0
 }
 

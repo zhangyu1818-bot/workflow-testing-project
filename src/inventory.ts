@@ -9,7 +9,7 @@ export interface InventoryItem {
 
 export function inventoryStatus(item: InventoryItem): InventoryStatus {
   if (item.onHand <= 0) return 'out_of_stock'
-  if (item.onHand < item.reorderPoint) return 'low_stock'
+  if (item.onHand <= item.reorderPoint) return 'low_stock'
   return 'in_stock'
 }
 
